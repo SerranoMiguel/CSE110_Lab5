@@ -24,16 +24,15 @@ Button that plays the horn sound
     Otherwise, it should play the selected horn sound with the current volume level
 
 */
-// TODO
-// Start with the input field - the text box
-// Here's the line with the textbox input
-//<input id="volume-number" name="volume-number" type="number" min="0" max="100" value="100"></input>
-var theVolume = document.getElementById("volume-number");
+
+//Handling text change
+var theVolume = document.getElementById("volume-number").value;
 theVolume.addEventListener('input', changeVol);
 function changeVol(){
     theVolume = this.value;
+    slider = this.value;
     adjustLevels(theVolume);
- } //end change vol
+ } //end changeVol
 
  var volLevel = document.getElementById("volume-image")
  function adjustLevels(volume){
@@ -48,5 +47,13 @@ function changeVol(){
         volLevel.src ="./assets/media/icons/volume-level-0.svg";
     }
  }// end adjustLevels()
+
+ // for the slider
+    var slider = document.getElementById("volume-slider");
+    slider.addEventListener('input', changeVol);
+    function sliderChange(){
+        theVolume = slider.value;
+        adjustLevels(theVolume);
+    }
 
 //vid.volume = 0.2;
