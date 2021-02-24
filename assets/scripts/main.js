@@ -24,7 +24,10 @@ Button that plays the horn sound
     Otherwise, it should play the selected horn sound with the current volume level
 
 */
-
+/*function changeColor(newColor) {
+    var elem = document.getElementById('para');
+    elem.style.color = newColor;
+  }*/
 //Handling text change
 var theVolume = document.getElementById("volume-number").value;
 theVolume.addEventListener('input', changeVol);
@@ -50,10 +53,10 @@ function changeVol(){
 
  // for the slider
     var slider = document.getElementById("volume-slider");
-    slider.addEventListener('input', changeVol);
+    slider.addEventListener('range', sliderChange);
     function sliderChange(){
         theVolume = slider.value;
         adjustLevels(theVolume);
-    }
+    } // end sliderChange()
 
 //vid.volume = 0.2;
