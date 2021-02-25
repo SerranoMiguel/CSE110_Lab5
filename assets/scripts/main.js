@@ -27,7 +27,7 @@ function changeVol(){
     slider = this.value;
     adjustLevels(theVolume);
  } //end changeVol
- theVolume.addEventListener('change', adjustSlider);
+ theVolume.addEventListener('input', adjustSlider);
 
 
 function adjustSlider(){
@@ -82,7 +82,7 @@ function soundPic(){
         theVolume = this.value;
         adjustLevels(theVolume);
     } // end sliderChange()
-    slider.addEventListener('change', adjustText);
+    slider.addEventListener('input', adjustText);
     function adjustText(){
         theVolume = slider;
     }
