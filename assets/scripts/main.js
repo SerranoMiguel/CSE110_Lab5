@@ -54,8 +54,8 @@ function changeVol(){
     var slider = document.getElementById("volume-slider");
     slider.addEventListener('range', sliderChange);
     function sliderChange(){
-        //theVolume = slider.value;
-        //adjustLevels(theVolume);
+        theVolume = slider.value;
+        adjustLevels(theVolume);
     } // end sliderChange() 
 
 //vid.volume = 0.2;
