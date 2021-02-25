@@ -24,6 +24,7 @@ var theVolume = document.getElementById("volume-number");
 theVolume.addEventListener('input', changeVol);
 function changeVol(){
     theVolume = this.value;
+    slider = this.value;
     adjustLevels(theVolume);
  } //end changeVol
 
@@ -69,14 +70,11 @@ function soundPic(){
     }
  }// end adjustLevels()
 
-
-
-
-
  // for the slider
     var slider = document.getElementById("volume-slider");
     slider.addEventListener('input', sliderChange);
     function sliderChange(){
+        slider = this.value;
         theVolume = this.value;
         adjustLevels(theVolume);
     } // end sliderChange()
