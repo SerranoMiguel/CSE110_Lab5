@@ -29,11 +29,10 @@ Button that plays the horn sound
     elem.style.color = newColor;
   }*/
 //Handling text change
-var theVolume = document.getElementById("volume-number").value;
+var theVolume = document.getElementById("volume-number");
 theVolume.addEventListener('input', changeVol);
 function changeVol(){
     theVolume = this.value;
-    //slider = this.value;
     adjustLevels(theVolume);
  } //end changeVol
 
