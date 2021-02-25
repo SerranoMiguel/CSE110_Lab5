@@ -27,8 +27,12 @@ function changeVol(){
     slider = this.value;
     adjustLevels(theVolume);
  } //end changeVol
+ theVolume.addEventListener('change', adjustSlider);
 
 
+function adjustSlider(){
+    slider = theVolume;
+}
  /*
 // for the play button
 var playButton = getElementById("honk-btn");
@@ -78,3 +82,7 @@ function soundPic(){
         theVolume = this.value;
         adjustLevels(theVolume);
     } // end sliderChange()
+    slider.addEventListener('change', adjustText);
+    function adjustText(){
+        theVolume = slider;
+    }
