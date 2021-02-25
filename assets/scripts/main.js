@@ -27,7 +27,9 @@ function changeVol(){
     adjustLevels(theVolume);
  } //end changeVol
 
-/*// for the play button
+
+ /*
+// for the play button
 var playButton = getElementById("honk-btn");
 playButton.addEventListener('click', playSound);
 function playSound(){
@@ -35,7 +37,22 @@ function playSound(){
 }
 
 //adjusting the sound/image
-var noiseType = getElementById("audio-selection");*/
+var currSound;
+var airHorn = getElementById("radio-air-horn");
+airHorn.addEventListener('radio', soundPic);
+
+var carHorn = getElementById("radio-car-horn");
+carHorn.addEventListener
+
+var partyHorn = getElementById("radio-party-horn");
+partyHorn.addEventListener
+function soundPic(){
+
+}
+
+*/
+//Idea: have event listeners for each?
+// On button click, change to that sounds + that picture?
 
 
  //adjusting the audio picture
@@ -55,11 +72,11 @@ var noiseType = getElementById("audio-selection");*/
 
 
 
-/*
+
  // for the slider
     var slider = document.getElementById("volume-slider");
     slider.addEventListener('range', sliderChange);
     function sliderChange(){
-        theVolume = slider.value;
+        theVolume = this.value;
         adjustLevels(theVolume);
-    } // end sliderChange() */
+    } // end sliderChange()
