@@ -75,7 +75,7 @@ function soundPic(){
 
  // for the slider
     var slider = document.getElementById("volume-slider");
-    slider.addEventListener('range', sliderChange);
+    slider.addEventListener('input', sliderChange);
     function sliderChange(){
         theVolume = this.value;
         adjustLevels(theVolume);
