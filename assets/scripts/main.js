@@ -9,12 +9,6 @@ Slider that serves visual controller for sound level
     When the slider position changes, the sound level of the <audio> element also changes
     This slider should update position when sound level is changed by the input field
     Again, the volume icon should display the correct number of bars based upon this value (see below for ranges)
-Volume icon that change depending on the sound level
-    volume-level-3: 67-100
-    volume-level-2: 34-66
-    volume-level-1: 1-33
-    volume-level-0: 0
-Change the volume icon depending on different ranges:
 Radio that switches between different horn sounds
     3 different options: Air Horn, Car Horn, and Party Horn
     Selecting a radio switch should change the sound that the <audio> element will play
@@ -29,22 +23,31 @@ Button that plays the horn sound
 var theVolume = document.getElementById("volume-number");
 theVolume.addEventListener('input', changeVol);
 function changeVol(){
-    theVolume = theVolume.value;
+    theVolume = this.value;
     adjustLevels(theVolume);
  } //end changeVol
 
+/*// for the play button
+var playButton = getElementById("honk-btn");
+playButton.addEventListener('click', playSound);
+function playSound(){
+
+}
+
+//adjusting the sound/image
+var noiseType = getElementById("audio-selection");*/
 
 
- //adjusting the picture
+ //adjusting the audio picture
  var volLevel = document.getElementById("volume-image")
  function adjustLevels(volume){
-     if(volume >= 67){
+     if(volume >= 67){ // level 3 = 67-100
          volLevel.src ="./assets/media/icons/volume-level-3.svg";
-     } else if (volume >=34){
+     } else if (volume >=34){  // level 2 = 34-66
         volLevel.src ="./assets/media/icons/volume-level-2.svg";
-    } else if (volume >=1) {
+    } else if (volume >=1) {   // level 1 = 1-33
         volLevel.src ="./assets/media/icons/volume-level-1.svg";
-    } else {
+    } else { // Level 0 = 0
         volLevel.src ="./assets/media/icons/volume-level-0.svg";
     }
  }// end adjustLevels()
@@ -60,5 +63,3 @@ function changeVol(){
         theVolume = slider.value;
         adjustLevels(theVolume);
     } // end sliderChange() */
-
-//vid.volume = 0.2;
